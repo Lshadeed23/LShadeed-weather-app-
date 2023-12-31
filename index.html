@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=, initial-scale=1.0">
 <link rel="stylesheet" href="src/style.css">
-<link href="<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
     <title>LShadeed Apps</title>
@@ -12,21 +12,35 @@
 <body>
     <div class="weather-app">
     <header>
-        <form>
-            <input type="search" placeholder="Enter a city.." required />
-            <input type="submit" value="Search" />
+        <form class="search-form">
+            <input 
+            type="search" 
+            placeholder="Enter a city.." 
+            required class="search-form-input"
+            />
+            <input 
+            type="submit" 
+            value="Search" 
+            class="search-form-button" 
+            />
         </form>
     </header>
     <main>
+        <div class="weather-app-info">  
         <div>
-    <h1>Montgomery</h1>
-    <p>
+    <h1 class="weather-app-city">Montgomery</h1>
+    <p class="weather-app-detail">
         Sunday 16:11, sunny
         <br/>
-        humidity: 63%, Wind 3.13km/h
+        humidity: <strong> 63% </strong>, Wind: <strong>3.13km/h</strong>
     </p>
 </div>
-    <div>☀️61°F</div>
+    <div class="weather-app-temp-container">
+        <div class="weather-app-icon">☀️</div> 
+        <div class="weather-app-temp-value">61</div> 
+        <div class="weather-app-temp-unit">°F</div>
+    </div>
+</div>
 </main>
 
     <footer>
