@@ -12,11 +12,13 @@
 <body>
     <div class="weather-app">
     <header>
-        <form class="search-form">
+        <form class="search-form" id="search-form">
             <input 
             type="search" 
             placeholder="Enter a city.." 
-            required class="search-form-input"
+            required 
+            id="search-form-input"
+            class="search-form-input"
             />
             <input 
             type="submit" 
@@ -28,7 +30,7 @@
     <main>
         <div class="weather-app-info">  
         <div>
-    <h1 class="weather-app-city">Montgomery</h1>
+    <h1 class="weather-app-city" id="city">Montgomery</h1>
     <p class="weather-app-detail">
         Sunday 16:11, sunny
         <br/>
@@ -51,5 +53,6 @@
      
        </footer>
     </div>
+    <script src="src/index.js"></script>
 </body>
 </html>
