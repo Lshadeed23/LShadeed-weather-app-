@@ -68,9 +68,12 @@ color: rgb(255, 0, 255);
     display: flex;
 }
 .weather-app-icon{
+    display: flex;
     font-size: 44px;
     margin-top: 22px;
     margin-left: 10px;
+    width: 80px;
+    height: 80px;
 }
 
 .weather-app-temp-value{
