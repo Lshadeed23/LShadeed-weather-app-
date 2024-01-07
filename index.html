@@ -1,71 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=, initial-scale=1.0">
-<link rel="stylesheet" href="src/style.css">
-<script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=, initial-scale=1.0" />
+    <link rel="stylesheet" href="src/style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
     <title>LShadeed Apps</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="weather-app">
-    <header>
+      <header>
         <form class="search-form" id="search-form">
-            <input 
-            type="search" 
-            placeholder="Enter a city.." 
-            required 
+          <input
+            type="search"
+            placeholder="Enter a city.."
+            required
             id="search-form-input"
             class="search-form-input"
-            />
-            <input 
-            type="submit" 
-            value="Search" 
-            class="search-form-button" 
-            />
+          />
+          <input type="submit" value="Search" class="search-form-button" />
         </form>
-    </header>
-    <main>
-        <div class="weather-app-info">  
-        <div>
-    <h1 class="weather-app-city" id="city"></h1>
-    <p class="weather-app-detail">
-        <span id="time"></span>,
-        <span id="description">sunny</span>
-        <br/>
-        humidity: <strong id="humidity"> </strong>, Wind: <strong id="wind-speed">3.13km/h</strong>
-    </p>
-</div>
-    <div class="weather-app-temp-container">
-        <div id="icon"></div>    
-        <div class="weather-app-temp-value" id="temperature"></div> 
-        <div class="weather-app-temp-unit">°F</div>
-    </div>
-</div>
-<div class="weather-forecast">
-    <div class="row">
-        <div class="col-2">Thu 
-            <img src="" 
-            alt=""
-            width="40"
-            />
-            18 12
+      </header>
+      <main>
+        <div class="weather-app-info">
+          <div>
+            <h1 class="weather-app-city" id="city"></h1>
+            <p class="weather-app-detail">
+              <span id="time"></span>,
+              <span id="description">sunny</span>
+              <br />
+              humidity: <strong id="humidity"> </strong>, Wind:
+              <strong id="wind-speed">3.13km/h</strong>
+            </p>
+          </div>
+          <div class="weather-app-temp-container">
+            <div id="icon"></div>
+            <div class="weather-app-temp-value" id="temperature"></div>
+            <div class="weather-app-temp-unit">°F</div>
+          </div>
         </div>
-    </div>
-</div>
-</main>
+        <div class="weather-forecast">
+          <div class="row">
+            <div class="col-2">
+              <div class="weather-forecast-date">Thu</div>
+              <img
+                src="http://openweathermap.org/img/wn/50d@2x.png"
+                alt=""
+                width="42"
+              />
+              <div class="weather-forecast-temperatures"></div>
+              <span class="weather-forecast-temperature-max"> 18° </span>
+              <span class="weather-forecast-temperature-min"> 12° </span>
+            </div>
+            
+          </div>
+        </div>
+      </main>
 
-    <footer>
-        This project was coded by 
-        <a href="https://github.com/Lshadeed23/"> Leah Shadeed </a>, is 
-        <a href="https://github.com/Lshadeed23/LShadeed-weather-app-">open-sourced on GitHub</a> and 
+      <footer>
+        This project was coded by
+        <a href="https://github.com/Lshadeed23/"> Leah Shadeed </a>, is
+        <a href="https://github.com/Lshadeed23/LShadeed-weather-app-"
+          >open-sourced on GitHub</a
+        >
+        and
         <a href="https://main--shadeed-app.netlify.app/">hosted on Netlify</a>
-     
-       </footer>
+      </footer>
     </div>
     <script src="src/index.js"></script>
-</body>
+  </body>
 </html>
