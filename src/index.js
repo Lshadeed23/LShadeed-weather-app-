@@ -52,34 +52,32 @@ function handleSearchSubmit(event) {
 }
 
 function displayForecast() {
-    let forecast = document.querySelector("#forecast");
+  let forecastElement = document.querySelector("#forecast");
 
-    let days = ["Tues", "Wed", "Thu", "Fri", "Sat"];
-    let forecastHtml = "";
+  let days = ["Tues", "Wed", "Thu", "Fri", "Sat"];
+  let forecastHtml = `<div class="row">`;
 
-    days.forEach(function (day) {
-        forecast.innerHTML =
-            forecastHtml +
-            `
-<div class="row">
-<div class="col-2">
-<div class="weather-forecast-day"></div>
-  <div class="weather-forecast-date">${day}</div>
-  <img
-    src="http://openweathermap.org/img/wn/50d@2x.png"
-    alt=""
-    width="42"
-  />
-  <div class="weather-forecast-temperatures"></div>
-  <span class="weather-forecast-temperature-max"> 18° </span>
-  <span class="weather-forecast-temperature-min"> 12° </span>
-</div>
-</div>
-`;
-    });
+  days.forEach(function (day) {
+    forecastHtml =
+      forecastHtml +
+      `
+        <div class="col-2">
+        <div class="weather-forecast-day"></div>
+        <div class="weather-forecast-date">${day}</div>
+        <img
+            src="http://openweathermap.org/img/wn/50d@2x.png"
+            alt=""
+            width="42"
+        />
+        <div class="weather-forecast-temperatures"></div>
+        <span class="weather-forecast-temperature-max"> 18° </span>
+        <span class="weather-forecast-temperature-min"> 12° </span>
+        </div>
+    `;
+  });
 
-    forecastElement.innerHTML = forecastHtml;
-
+  forecastHtml = forecastHtml + `</div>`;
+  forecastElement.innerHTML = forecastHtml;
 }
 
 let searchFormElement = document.querySelector("#search-form");
