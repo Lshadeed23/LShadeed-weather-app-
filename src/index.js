@@ -63,10 +63,9 @@ console.log(apiUrl);
 function displayForecast(response) {
   console.log(response.data);
 
-  let days = ["Tues", "Wed", "Thu", "Fri", "Sat"];
-  let forecastHtml = `<div class="row">`;
+    let forecastHtml = `<div class="row">`;
 
-  days.forEach(function (day) {
+  response.data.daily.forEach(function (day) {
     forecastHtml =
       forecastHtml +
       `
@@ -74,13 +73,11 @@ function displayForecast(response) {
         <div class="weather-forecast-day"></div>
         <div class="weather-forecast-date">${day}</div>
         <img
-            src="http://openweathermap.org/img/wn/50d@2x.png"
-            alt=""
-            width="42"
-        />
+            src="${day,condition.icon_url}"
+          />
         <div class="weather-forecast-temperatures"></div>
-        <span class="weather-forecast-temperature-max"> 18° </span>
-        <span class="weather-forecast-temperature-min"> 12° </span>
+        <span class="weather-forecast-temperature-max">${Math.round(day.temperature.maximum)}° </span>
+        <span class="weather-forecast-temperature-min"> ${Math.round(day.temperature.minimum)}° </span>
         </div>
     `;
   });
