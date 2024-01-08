@@ -51,8 +51,17 @@ function handleSearchSubmit(event) {
     searchCity(searchInput.value);
 }
 
-function displayForecast() {
-  let forecastElement = document.querySelector("#forecast");
+function getForecast(city){
+let apiKey = "e7acafab59o2a05b63830a8t5f4aa341";
+let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=imperial`;
+axios(apiUrl).then(displayForecast);
+console.log(apiUrl);
+}
+
+
+
+function displayForecast(response) {
+  console.log(response.data);
 
   let days = ["Tues", "Wed", "Thu", "Fri", "Sat"];
   let forecastHtml = `<div class="row">`;
@@ -75,7 +84,7 @@ function displayForecast() {
         </div>
     `;
   });
-
+let forecastElement = document.querySelector("#forecast");
   forecastHtml = forecastHtml + `</div>`;
   forecastElement.innerHTML = forecastHtml;
 }
@@ -84,4 +93,5 @@ let searchFormElement = document.querySelector("#search-form");
 searchFormElement.addEventListener("submit", handleSearchSubmit);
 
 searchCity("Montgomery");
-displayForecast();
+getForecast("Montgomery");
+
