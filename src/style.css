@@ -38,8 +38,10 @@ body {
     margin-left: 5px;
     border-radius: 6px;
     color: white;
+    transition: all 200ms ease;
+    cursor: pointer;
   }
-  
+
   main {
     padding: 30px 0;
   }
